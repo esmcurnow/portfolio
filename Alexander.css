@@ -1,0 +1,98 @@
+html, body {
+	background-color: #FFFFFF;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+body {
+	min-height: 700px;}
+	body{
+		font-family: 'Lato', sans-serif;
+		}
+      	h1{
+            text-align:center;
+            margin: .5%;
+            padding:1% 1% 2% 0%;
+            color:#bfbfbf;
+            }
+      h1 a :hover{
+      	color: #9BCCC7;
+      }
+      h1 a{
+      	color: #bfbfbf;
+      }
+        a{
+   		text-decoration: none;
+  		}
+
+
+
+
+ 
+#wrapper {
+	width: 100%;
+	height: 790px;
+	margin-top: -295px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	overflow: hidden;
+}
+ 
+#carousel img {
+	background-color: #fff;
+	border: none;
+	display: block;
+	padding: 15px;
+	margin: 30px;
+	float: left;
+	
+}
+#carousel .empty {
+	display: block;
+	width: 600px;
+	height: 400px;
+	float: left;
+}
+ 
+#bar {
+	background-color: #ffffff;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 10%;
+	left: 0;
+}
+#bar * {
+	color: #bfbfbf;
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: bold;
+}
+#prev, #next {
+	font-size: 30px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	background-color: #bfbfbf;
+}
+#prev:hover, #next:hover {
+	background-color: #9BCCC7;
+}
+#prev.disabled, #next.disabled {
+	background-color: transparent !important;
+	cursor: default;
+	
+	opacity: 0.1;
+}
+#prev {
+	left: 0;
+}
+#next {
+	right: 0;
+}

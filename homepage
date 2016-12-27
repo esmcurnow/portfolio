@@ -1,0 +1,36 @@
+
+.gridWrapper {
+      overflow: hidden;
+      margin: 10px;
+}
+.item {
+float: left;
+      position: relative;
+      width: 20%;
+      padding-bottom: 20%;
+    }
+.tileInner {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+      overflow: hidden;
+    }
+.tileInner img {
+      width: 100%;
+    }
+/*Media Query to Adapt Screen to iPhone*/
+@media only screen and (max-width : 320px) {
+    .tile {
+        width: 100%;
+        padding-bottom: 100%;
+      }
+}
+/*Media Query to Adapt Screen to iPhone Retina*/
+@media only screen and (max-width : 640px) {
+    .box {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+}

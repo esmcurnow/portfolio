@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Esther Curnow - Alexander the Great</title>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="Alexander.css" type="text/css" media="screen">
+<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+		<script type="text/javascript">
+function getMinMarge( newItems ) {
+	var center  = newItems.eq(0).outerWidth(true) + (newItems.eq(1).outerWidth(true) / 2);
+	var minMarg = ($(window).width() / 2) - center;
+	
+	return minMarg;
+}
+function showTitle( item ) {
+	$('#title').html( item.attr( 'alt' ) );
+}
+$(function() {
+	$('#carousel').carouFredSel({
+		width: 10000,	//	should be wide enough ;)
+		height: 790,
+		align: false,
+		circular: false,
+		infinite: false,
+		items: 3,
+		prev: '#prev',
+		next: '#next',
+		auto: false,
+		scroll: {
+			items: 1,
+			duration: 1000,
+			onBefore: function( data ) {
+				$(this).parent().animate({
+					'marginLeft': getMinMarge( data.items.visible )
+				}, data.scroll.duration);
+				data.items.old.eq(1).animate({
+					'opacity': 0.2
+				}, data.scroll.duration);
+				data.items.visible.eq(1).animate({
+					'opacity': 1
+				}, data.scroll.duration);
+				showTitle( data.items.visible.eq(1) );
+			}
+		},
+		onCreate: function( data ) {
+			$(this).parent().css({
+				'marginLeft': getMinMarge( data.items )
+			});
+			$(this).children().not(':eq(1)').css({
+				'opacity': 0.2
+			});
+			showTitle( data.items.eq(1) );
+		}
+	});
+});
+</script>
+</head>
+<body>
+<h1><a href="index.html" id="Homepage">ESTHER CURNOW</a> </h1>
+<div id="wrapper">
+	<div id="carousel">
+		<span class="empty"></span> <!-- trick the carousel to start 1 item to the right -->
+		<img src="Alexander/pg1_2.jpg"  alt="ALEXANDER THE GREAT"width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg3_4.jpg" alt="ALEXANDER THE GREAT"width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg5_6.jpg" alt="ALEXANDER THE GREAT"width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg7_8.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg9_10.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg11_12.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg13_14.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg15_16.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg17_18.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg19_20.jpg"alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg21_22.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg23_24.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg25_26.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg27_28.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		<img src="Alexander/pg29_30.jpg" alt="ALEXANDER THE GREAT" width="750" height="525" style="margin-top: 80px;" />
+		
+		<span class="empty"></span> <!-- trick the carousel to end 1 item to the left -->
+	</div>
+</div>
+<div id="bar">
+	<a id="prev" href="#">&laquo;</a>
+	<a id="next" href="#">&raquo;</a>
+	<span id="title"></span>
+</div>
