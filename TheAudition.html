@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Esther Curnow - The Audition</title>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="TheAudition.css" type="text/css" media="screen">
+<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+		<script type="text/javascript">
+function getMinMarge( newItems ) {
+	var center  = newItems.eq(0).outerWidth(true) + (newItems.eq(1).outerWidth(true) / 2);
+	var minMarg = ($(window).width() / 2) - center;
+	
+	return minMarg;
+}
+function showTitle( item ) {
+	$('#title').html( item.attr( 'alt' ) );
+}
+$(function() {
+	$('#carousel').carouFredSel({
+		width: 10000,	//	should be wide enough ;)
+		height: 790,
+		align: false,
+		circular: false,
+		infinite: false,
+		items: 3,
+		prev: '#prev',
+		next: '#next',
+		auto: false,
+		scroll: {
+			items: 1,
+			duration: 1000,
+			onBefore: function( data ) {
+				$(this).parent().animate({
+					'marginLeft': getMinMarge( data.items.visible )
+				}, data.scroll.duration);
+				data.items.old.eq(1).animate({
+					'opacity': 0.2
+				}, data.scroll.duration);
+				data.items.visible.eq(1).animate({
+					'opacity': 1
+				}, data.scroll.duration);
+				showTitle( data.items.visible.eq(1) );
+			}
+		},
+		onCreate: function( data ) {
+			$(this).parent().css({
+				'marginLeft': getMinMarge( data.items )
+			});
+			$(this).children().not(':eq(1)').css({
+				'opacity': 0.2
+			});
+			showTitle( data.items.eq(1) );
+		}
+	});
+});
+</script>
+</head>
+<body>
+<h1><a href="index.html" id="Homepage">ESTHER CURNOW</a> </h1>
+<div id="wrapper">
+	<div id="carousel">
+		<span class="empty"></span> <!-- trick the carousel to start 1 item to the right -->
+		<img src="TheAudition/01_02.jpg"  alt="THE AUDITION"width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/03_04.jpg" alt="THE AUDITION"width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/05_06.jpg" alt="THE AUDITION"width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/07_08.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/09_10.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/11_12.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/13_14.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/15_16.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/17_18.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/19_20.jpg"alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/21_22.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/23_24.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/25_26.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/27_28.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/29_30.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/31_32.jpg"  alt="THE AUDITION"width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/33_34.jpg" alt="THE AUDITION"width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/35_36.jpg" alt="THE AUDITION"width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/37_38.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/39_40.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/41_42.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/43_44.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/45_46.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/47_48.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/49_50.jpg"alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/51_52.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/53_54.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/55_56.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/57_58.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/59_60.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+        <img src="TheAudition/61_62.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/63_64.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+		<img src="TheAudition/65_66.jpg" alt="THE AUDITION" width="750" height="525" style="margin-top: 80px;" />
+
+		<span class="empty"></span> <!-- trick the carousel to end 1 item to the left -->
+	</div>
+</div>
+<div id="bar">
+	<a id="prev" href="#">&laquo;</a>
+	<a id="next" href="#">&raquo;</a>
+	<span id="title"></span>
+</div>

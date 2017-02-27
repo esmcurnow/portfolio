@@ -1,5 +1,6 @@
 		body{
 		font-family: 'Lato', sans-serif;
+        color:#A6A6A6;
 		}
       	h1 {
         text-align:center; 
@@ -9,12 +10,29 @@
         text-align:center; 
         color:#A6A6A6;
         }
-        h1 a{
-      	color: #bfbfbf;
-      }
+      
         a{
    		text-decoration: none;
+        color:#A6A6A6;
   		}
+      .nav{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    color: #bfbfbf;
+}
 
 .fancybox-custom .fancybox-skin { 
 box-shadow: 0 0 50px #222; }
+
+iframe {
+        margin-left: 0;
+    }
