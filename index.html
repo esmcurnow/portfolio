@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
 		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
 		<meta name="description" value="" />
 		<meta name="keywords" value="photography, painting, web design, creative, illustration" />
 		<title>Esther Curnow</title>
-        <link rel="stylesheet" href="portfolio.css" type="text/css" media="screen">
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="portfolio.css" type="text/css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<h1>ESTHER CURNOW</h1>
+		<div class="nav">
+			<ul>
+				<li><a href="photos.html" id="photography">PHOTOGRAPHY</a></li>
+				<li><a href="illustrations.html" id="illustration">ILLUSTRATION</a></li>
+				<li><a href="paintings.html" id="painting">PAINTING</a></li>
+				<li><a href="designs.html" id="design">DESIGN</a></li>
+	    	<li><a href="Alexander.html" id="Alexander">ALEXANDER THE GREAT</a></li>
+	    	<li><a href="TheAudition.html" id="The Audition">THE AUDITION</a></li>
+	    	<li><a href="http://www.partya.co.nz/" id="website">WEBSITE</a></li>
+	    	<li><a href="showreel.html" id="showreel">SHOWREEL</a></li>
+			</ul>
+		</div>
+		<div id="wrapper">
+			<div id="carousel">
+				<img src="homepageILLUSTRATION.jpg" alt="ILLUSTRATION" width="990" height="450"/>
+		    <img src="homepagePHOTOGRAPHY.jpg" alt="PHOTOGRAPHY" width="990" height="450"/>
+		    <img src="homepagePAINTING.jpg" alt="PAINTING" width="990" height="450" />
+				<img src="homepageALEXANDER.jpg" alt="ALEXANDER" width="990" height="450" />
+				<img src="homepageWEBSITE.jpg" alt="WEBSITES" width="990" height="450" />
+				<img src="homepageDESIGN.jpg" alt="DESIGN" width="990" height="450" />
+			</div>
+			<div id="pager">
+				<a href="#" id="prev" title="Show previous"> </a>
+				<a href="#" id="next" title="Show next"> </a>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			$(function() {
@@ -29,38 +57,8 @@
 						container: '#pager',
 						deviation: 1
 					}
-
 				});
 			});
 		</script>
-			</head>
-	<body>
-		<h1>ESTHER CURNOW</h1>
-		<div class="nav">
-		<ul>
-		<li><a href="photos.html" id="photography">PHOTOGRAPHY</a></li>
-		<li><a href="illustrations.html" id="illustration">ILLUSTRATION</a></li>
-		<li><a href="paintings.html" id="painting">PAINTING</a></li>
-		<li><a href="designs.html" id="design">DESIGN</a></li>
-    	<li><a href="Alexander.html" id="Alexander">ALEXANDER THE GREAT</a></li>
-    	<li><a href="TheAudition.html" id="The Audition">THE AUDITION</a></li>
-    	<li><a href="http://www.partya.co.nz/" id="website">WEBSITE</a></li>
-    	<li><a href="showreel.html" id="showreel">SHOWREEL</a></li>
-		</ul>
-		</div>
-		<div id="wrapper"></div>
-			<div id="carousel">
-				<img src="homepageILLUSTRATION.jpg" alt="ILLUSTRATION" width="990" height="450"/>
-			    <img src="homepagePHOTOGRAPHY.jpg" alt="PHOTOGRAPHY" width="990" height="450"/>
-			    <img src="homepagePAINTING.jpg" alt="PAINTING" width="990" height="450" />
-				<img src="homepageALEXANDER.jpg" alt="ALEXANDER" width="990" height="450" />
-				<img src="homepageWEBSITE.jpg" alt="WEBSITES" width="990" height="450" />
-				<img src="homepageDESIGN.jpg" alt="DESIGN" width="990" height="450" />
-			</div>
-			<a href="#" id="prev" title="Show previous"> </a>
-			<a href="#" id="next" title="Show next"> </a>
-			<div id="pager"></div>
-		</div>
-		
 	</body>
 </html>
