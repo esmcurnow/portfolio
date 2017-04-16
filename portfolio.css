@@ -44,3 +44,7 @@ iframe {
 	padding: 0 10px;
 	width: 250px;
 }
+
+.grid-item-space-below {
+	padding: 10px 10px;
+}
