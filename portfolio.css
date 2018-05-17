@@ -8,12 +8,13 @@ h1, h2 {
 }
 h1{
     font-size: 2em;
-    /*font-weight: 100;*/
+    font-weight: 100; 
     margin: 0 !important;
     padding:0.5% 0 2% 0;
 }
 h2 {
 	font-size: 1.5em;
+	font-weight: 100; 
 }
 a {
   text-decoration: none;
@@ -21,6 +22,15 @@ a {
 }
 a:hover {
 	color: #363636;
+}
+p {
+	text-align: center;
+	padding-top: -3px;
+}
+#pager{
+	text-align: center;
+	padding-top: 0.8%;
+	font-size: 0.8em;
 }
 .nav{
   list-style:none;
